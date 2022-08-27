@@ -28,3 +28,5 @@ The QuoteEngine module consists
 of different ingestors to pull quotes from CSV, Docx, PDF, Txt files into a [quotes, author] list.  
 Random Images are scanned in meme.py and app.py and feed to MemeEngine module to add the quotes to the images.
 
+Sources for this project:
+Udacity class, knowledge base questions and answers and google searches.
