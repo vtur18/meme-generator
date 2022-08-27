@@ -17,11 +17,10 @@ your image) –body (your quote) –author (who wrote the quote)
 
 The app.py file can be excuted by running python3 app.py.  This will open up a webpage which you 
 can copy the url to your web browser.  You can generate random memes by clicking on the Random button 
-or Creator button to specify an image, quote, and author.  A .jpg or .png url link can be used for 
-example:
+or Creator button to specify an image, quote, and author. These memes will be stored in the ‘static’ 
+folder. A .jpg or .png url link can be used for example:
 https://images.ctfassets.net/2y9b3o528xhq/5p7HANmA1jsw8P9EVOeVso/cbfa17357399d99a76d641c777e81a81/self-paced.png
 https://images.ctfassets.net/2y9b3o528xhq/5sXS0Rr3MEr66P5elfYX7P/3728cc2d85c0979cb29d5cb291369038/mentor.jpg
-These memes will be stored in the ‘static’ folder.
 
 Sub-modules:
 
