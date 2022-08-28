@@ -1,3 +1,4 @@
+"""Read and parse text file to load quotes."""
 from typing import List
 from .IngestorInterface import IngestorInterface
 from .QuoteModel import QuoteModel
@@ -10,6 +11,7 @@ class TextIngestor(IngestorInterface):
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Parse text file to load quotes."""
         if not cls.can_ingest(path):
             raise Exception('Not a txt file, cannot ingest exception')
 

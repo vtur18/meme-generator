@@ -1,3 +1,4 @@
+"""Read and parse pdf file to load quotes."""
 from typing import List
 import subprocess
 import os
@@ -8,12 +9,13 @@ from .QuoteModel import QuoteModel
 
 
 class PDFIngestor(IngestorInterface):
-    """Consume a pdf file."""
+    """Convert pdf file to text and parse the quotes to list."""
 
     allowed_extensions = ['pdf']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Parse pdf file to text file to load quotes."""
         if not cls.can_ingest(path):
             raise Exception('cannot ingest exception')
 

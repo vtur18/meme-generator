@@ -1,3 +1,4 @@
+"""Consume a CSV file module."""
 from typing import List
 import pandas
 
@@ -12,6 +13,7 @@ class CSVIngestor(IngestorInterface):
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Read and parse csv file."""
         if not cls.can_ingest(path):
             raise Exception('cannot ingest exception')
 

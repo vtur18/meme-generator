@@ -1,3 +1,4 @@
+"""Read and parse a docx file to load quotes."""
 from typing import List
 import docx
 
@@ -12,6 +13,7 @@ class DocxIngestor(IngestorInterface):
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Read and parse a docx file to load quotes."""
         if not cls.can_ingest(path):
             raise Exception('cannot ingest exception')
 
