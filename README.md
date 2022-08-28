@@ -26,7 +26,7 @@ The following sample .jpg or .png url link can be used for example:
 https://images.ctfassets.net/2y9b3o528xhq/5p7HANmA1jsw8P9EVOeVso/cbfa17357399d99a76d641c777e81a81/self-paced.png
 https://images.ctfassets.net/2y9b3o528xhq/5sXS0Rr3MEr66P5elfYX7P/3728cc2d85c0979cb29d5cb291369038/mentor.jpg
 https://www.spockthedog.com/wp-content/uploads/2017/01/its-harder-to-run-then-to-stay-still.jpg    
-https://www.spockthedog.com/wp-content/uploads/2017/01/Exploring-new-worlds.jpg     
+https://www.spockthedog.com/wp-content/uploads/2015/03/Chihuahua.jpg     
 https://www.spockthedog.com/wp-content/uploads/2016/03/West-Highland-White-Terrier2.jpg    
 
 Sub-modules:
