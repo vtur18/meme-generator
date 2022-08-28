@@ -1,3 +1,4 @@
+"""Generate random or user specific image from a webpage."""
 import random
 import os
 import requests
@@ -13,8 +14,7 @@ meme = MemeEngine('./static')
 
 
 def setup():
-    """ Load all resources """
-
+    """Load all resources."""
     quote_files = ['./_data/DogQuotes/DogQuotesTXT.txt',
                    './_data/DogQuotes/DogQuotesDOCX.docx',
                    './_data/DogQuotes/DogQuotesPDF.pdf',
@@ -38,7 +38,7 @@ quotes, imgs = setup()
 
 @app.route('/')
 def meme_rand():
-    """ Generate a random meme """
+    """Generate a random meme."""
     img = random.choice(imgs)
     quote = random.choice(quotes)
     path = meme.make_meme(img, quote.body, quote.author)
@@ -47,24 +47,27 @@ def meme_rand():
 
 @app.route('/create', methods=['GET'])
 def meme_form():
-    """ User input for meme information """
+    """User input for meme information."""
     return render_template('meme_form.html')
 
 
 @app.route('/create', methods=['POST'])
 def meme_post():
-    """ Create a user defined meme """
+    """Create a user defined meme."""
+    image_url = request.form['image_url']
     try:
-        img = requests.get(request.form['image_url'])
+        img = requests.get(image_url)
     except (requests.exceptions.HTTPError,
+            requests.exceptions.Timeout,
             requests.exceptions.ConnectionError,
             requests.exceptions.InvalidURL):
-        print('Please enter a valid URL')
+            return render_template('meme_bad_url.html')
 
     b = request.form['body']
     a = request.form['author']
     tmp = f'./static/{random.randint(1, 100000)}.png'
     open(tmp, 'wb').write(img.content)
+
     path = meme.make_meme(tmp, b, a)
     os.remove(tmp)
     return render_template('meme.html', path=path)

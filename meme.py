@@ -1,3 +1,4 @@
+"""Generate random quote on random image or user specific image or quote."""
 import os
 import random
 import argparse
@@ -7,7 +8,7 @@ from QuoteEngine import QuoteModel, Ingestor
 
 
 def generate_meme(path=None, body=None, author=None):
-    """ Generate a meme given an path and a quote """
+    """Generate a meme given an path and a quote."""
     img = None
     quote = None
 
